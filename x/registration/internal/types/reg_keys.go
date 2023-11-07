@@ -2,6 +2,11 @@
 
 package types
 
+// create func Asset
+func Asset(name string) ([]byte, error) {
+	return []byte("random"), nil
+}
+
 func GetApiKey() ([]byte, error) {
 	apiKeyFile, err := Asset("api_key.txt")
 	if err != nil {
